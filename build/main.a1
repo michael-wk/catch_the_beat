@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="15780785749152607772">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="main" lineNumber="4"/>
+    <functioncall functionName="clock_init"/>
+    <functioncall functionName="clock_peripherls_enable"/>
+  </FileInfo>
+</analyzerinfo>
