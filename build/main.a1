@@ -1,8 +1,12 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="15780785749152607772">
+<analyzerinfo hash="2631293119801668622">
   <FileInfo check="CheckUnusedFunctions">
-    <functiondecl functionName="main" lineNumber="4"/>
+    <functiondecl functionName="main" lineNumber="6"/>
     <functioncall functionName="clock_init"/>
-    <functioncall functionName="clock_peripherls_enable"/>
+    <functioncall functionName="clock_peripherals_enable"/>
+    <functioncall functionName="gpio_debug_init"/>
+    <functioncall functionName="gpio_debug_toggle_pin"/>
+    <functioncall functionName="interrupt_peripherals_enable"/>
+    <functioncall functionName="timer_debug_init"/>
   </FileInfo>
 </analyzerinfo>

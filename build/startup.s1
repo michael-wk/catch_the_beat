@@ -1,0 +1,2 @@
+Reset_Handler global:[_ebss,_edata,_sbss,_sdata,_sidata] call:[main]
+Default_Handler

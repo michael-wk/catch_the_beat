@@ -27,6 +27,7 @@ SRCS 	= src/main.c \
 		  src/drivers/gpio.c \
 		  src/drivers/i2c.c \
 		  src/drivers/timer.c \
+		  src/drivers/interrupt.c \
 		  src/lib/board.c \
 		  src/lib/screen.c \
 		  src/lib/input.c \

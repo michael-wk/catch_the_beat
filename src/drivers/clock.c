@@ -17,11 +17,11 @@ void clock_init(void)
 
     // PLL off
     REG(RCC_Base_Addr) &= ~(1U << 24U);
-    while (RCC_Base_Addr & (1U << 25U));
+    while (REG(RCC_Base_Addr) & (1U << 25U));
 
     // PLL configure (PLLSRC = HSI RC)
-    REG(RCC_Base_Addr + 0x04U) &= ~(1U << 16U);
-    REG(RCC_Base_Addr + 0x04U) |= (1U << 16U);
+    REG(RCC_Base_Addr + 0x04U) &= ~(3U << 15U);
+    REG(RCC_Base_Addr + 0x04U) |= (1U << 15U);
 
     // PLL configure (PLLMUL = x12)
     REG(RCC_Base_Addr + 0x04U) &= ~(0xFU << 18U);
@@ -29,11 +29,23 @@ void clock_init(void)
 
     // PLL on back on
     REG(RCC_Base_Addr) |= (1U << 24U);
-    while (!(RCC_Base_Addr & (1U << 25U)));
+    while (!(REG(RCC_Base_Addr) & (1U << 25U)));
 
     // PLLCLK as SYSCLK source (SW: b10, SWS b10)
     REG(RCC_Base_Addr + 0x04U) &= ~(3U << 0U);
     REG(RCC_Base_Addr + 0x04U) |= (2U << 0U);
+
+}
+
+
+void clock_peripherals_enable(void)
+{
+    // TIM3 enable
+    REG(RCC_Base_Addr + 0x1CU) |= (1U << 1U);
+
+    // GPIOA enable
+    REG(RCC_Base_Addr + 0x14U) |= (1U << 17U);
+
 
 }
 

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="17714847833917723078">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="interrupt_peripherals_enable" lineNumber="3"/>
+  </FileInfo>
+</analyzerinfo>

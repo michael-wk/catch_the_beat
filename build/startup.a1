@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="8190588979276596163">
+        <error id="comparePointers" severity="error" msg="Comparing pointers that point to different objects" verbose="Comparing pointers that point to different objects" cwe="570" file0="/home/michaelwk/Projects/ctb/src/startup.c">
+            <location file="/home/michaelwk/Projects/ctb/src/startup.c" line="18" column="16"/>
+            <location file="/home/michaelwk/Projects/ctb/src/startup.c" line="18" column="18" info="Address of variable taken here."/>
+            <location file="/home/michaelwk/Projects/ctb/src/startup.c" line="6" column="25" info="Variable declared here."/>
+            <location file="/home/michaelwk/Projects/ctb/src/startup.c" line="15" column="21" info="Address of variable taken here."/>
+            <location file="/home/michaelwk/Projects/ctb/src/startup.c" line="6" column="17" info="Variable declared here."/>
+        </error>
+        <error id="comparePointers" severity="error" msg="Comparing pointers that point to different objects" verbose="Comparing pointers that point to different objects" cwe="570" file0="/home/michaelwk/Projects/ctb/src/startup.c">
+            <location file="/home/michaelwk/Projects/ctb/src/startup.c" line="22" column="16"/>
+            <location file="/home/michaelwk/Projects/ctb/src/startup.c" line="22" column="18" info="Address of variable taken here."/>
+            <location file="/home/michaelwk/Projects/ctb/src/startup.c" line="7" column="24" info="Variable declared here."/>
+            <location file="/home/michaelwk/Projects/ctb/src/startup.c" line="21" column="11" info="Address of variable taken here."/>
+            <location file="/home/michaelwk/Projects/ctb/src/startup.c" line="7" column="17" info="Variable declared here."/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Reset_Handler" lineNumber="12"/>
+    <functiondecl functionName="Default_Handler" lineNumber="28"/>
+    <functioncall functionName="HardFault_Handler"/>
+    <functioncall functionName="NMI_Handler"/>
+    <functioncall functionName="Reset_Handler"/>
+    <functioncall functionName="TIM3_Handler"/>
+    <functioncall functionName="USART2_Handler"/>
+    <functioncall functionName="main"/>
+  </FileInfo>
+</analyzerinfo>
