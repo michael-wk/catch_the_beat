@@ -2,10 +2,58 @@
 #include <stdint.h>
 #include "mem.h"
 
-static struct
+
+/* Initializes GPIO pins for 2x1 matrix debug:
+ * PA0  - a (column 0) GPIO out
+ * PA1  - b (column 1) GPIO out
+ * PC0  - b (row 0 NPN base GPIO out)
+ * PC1  - c (row 1 NPN base GPIO out)
+*/ 
+void gpio_debug_matrix_init()
 {
-    volatile uint8_t set;
-} gpio_debug;
+   //PA0
+   REG(GPIO_Base_Addr) &= ~(3U << 0U); // clear
+   REG(GPIO_Base_Addr) |= (1U << 0U); // MODER GPOut
+   //PA1
+   REG(GPIO_Base_Addr) &= ~(3U << (1U * 2U)); // clear
+   REG(GPIO_Base_Addr) |= (1U << (1U * 2U)); // MODER GPOut
+   //PC0
+   REG(GPIO_Base_Addr + 0x800U) &= ~(3U << 0U); // clear
+   REG(GPIO_Base_Addr + 0x800U) |= (1U << 0U); // MODER GPOut
+   //PC1
+   REG(GPIO_Base_Addr + 0x800U) &= ~(3U << (1U * 2U)); // clear
+   REG(GPIO_Base_Addr + 0x800U) |= (1U << (1U * 2U)); // MODER GPOut
+}
+
+
+void gpio_debug_matrix_toggle(uint8_t row, uint8_t column)
+{
+    // will hard code this for the test just to test the wiring,
+
+    switch(row)
+    {
+        case 0:
+            // toggle PA0 high
+            REG(GPIO_Base_Addr + 0x18U) |= (0x1U << 16U);
+            break;
+        case 1:
+            // toggle PA1 high;
+            REG(GPIO_Base_Addr + 0x18U) |= (0x1U << 17U);
+            break;
+    }
+    
+    switch (column)
+    {
+        case 0:
+            // toggle PC0 high;
+            REG(GPIO_Base_Addr + 0x800U + 0x18U) |= (0x1U << 16U);
+            break;
+        case 1:
+            // toggle PC1 high;
+            REG(GPIO_Base_Addr + 0x800U + 0x18U) |= (0x1U << 17U);
+            break;
+    }
+}
 
 
 void gpio_debug_init(void)

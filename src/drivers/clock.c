@@ -46,6 +46,8 @@ void clock_peripherals_enable(void)
     // GPIOA enable
     REG(RCC_Base_Addr + 0x14U) |= (1U << 17U);
 
+    // GPIOC enable
+    REG(RCC_Base_Addr + 0x14U) |= (1U << 19U);
 
 }
 

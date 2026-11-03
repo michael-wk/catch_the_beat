@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="13357334856735153599">
-  <FileInfo check="CheckUnusedFunctions">
-    <functiondecl functionName="gpio_debug_init" lineNumber="11"/>
-    <functiondecl functionName="gpio_debug_toggle_pin" lineNumber="19"/>
-  </FileInfo>
+<analyzerinfo hash="1157564267523243742">
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous0::a&apos; is never used." verbose="struct member &apos;Anonymous0::a&apos; is never used." cwe="563" file0="/home/michaelwk/Projects/ctb/src/drivers/gpio.h">
+            <location file="/home/michaelwk/Projects/ctb/src/drivers/gpio.h" line="10" column="22"/>
+            <symbol>Anonymous0::a</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous1::set&apos; is never used." verbose="struct member &apos;Anonymous1::set&apos; is never used." cwe="563" file0="/home/michaelwk/Projects/ctb/src/drivers/gpio.h">
+            <location file="/home/michaelwk/Projects/ctb/src/drivers/gpio.h" line="29" column="22"/>
+            <symbol>Anonymous1::set</symbol>
+        </error>
 </analyzerinfo>

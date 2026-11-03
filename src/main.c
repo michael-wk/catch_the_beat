@@ -14,11 +14,14 @@ int main()
     interrupt_peripherals_enable();
 
     // enable GPIO debug pins
-    gpio_debug_init();
-    gpio_debug_toggle_pin();
+    //gpio_debug_init();
     //gpio_debug_toggle_pin();
+    //gpio_debug_toggle_pin();
+    
+    gpio_debug_matrix_init();
 
-    timer_debug_init();
+    gpio_debug_matrix_toggle(0,0);
+    //timer_debug_init();
     for(;;);
 }
 

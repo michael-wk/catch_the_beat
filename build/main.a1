@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="2631293119801668622">
+<analyzerinfo hash="11173469641712048311">
+  <FileInfo check="ctu">
+<function-call call-id="/home/michaelwk/Projects/ctb/src/drivers/gpio.h:21:6" call-funcname="gpio_debug_matrix_toggle" call-argnr="1" file="/home/michaelwk/Projects/ctb/src/main.c" line="23" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/michaelwk/Projects/ctb/src/drivers/gpio.h:21:6" call-funcname="gpio_debug_matrix_toggle" call-argnr="2" file="/home/michaelwk/Projects/ctb/src/main.c" line="23" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
   <FileInfo check="CheckUnusedFunctions">
     <functiondecl functionName="main" lineNumber="6"/>
     <functioncall functionName="clock_init"/>
     <functioncall functionName="clock_peripherals_enable"/>
-    <functioncall functionName="gpio_debug_init"/>
-    <functioncall functionName="gpio_debug_toggle_pin"/>
+    <functioncall functionName="gpio_debug_matrix_init"/>
+    <functioncall functionName="gpio_debug_matrix_toggle"/>
     <functioncall functionName="interrupt_peripherals_enable"/>
-    <functioncall functionName="timer_debug_init"/>
   </FileInfo>
 </analyzerinfo>

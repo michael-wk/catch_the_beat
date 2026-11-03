@@ -1,2 +1,0 @@
-gpio_debug_init global:[gpio_debug]
-gpio_debug_toggle_pin global:[gpio_debug]

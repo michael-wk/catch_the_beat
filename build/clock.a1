@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="7153203010049806164">
+<analyzerinfo hash="11072899924087646461">
   <FileInfo check="CheckUnusedFunctions">
     <functiondecl functionName="clock_init" lineNumber="4"/>
     <functiondecl functionName="clock_peripherals_enable" lineNumber="41"/>
