@@ -18,7 +18,7 @@ void timer_debug_init(void)
 
    // setting auto reload 
    REG(TIM3_Base_Addr + 0x2CU) &= ~(0xFFFFU);
-   REG(TIM3_Base_Addr + 0x2CU) |= (100U); // 100 ms;
+   REG(TIM3_Base_Addr + 0x2CU) |= (500U); // 100 ms;
 
    // setting UG in EGR to 1 to re-init counter, take auto reload val
    REG(TIM3_Base_Addr + 0x14U) |= (1U << 0U);
@@ -40,6 +40,5 @@ void TIM3_Handler(void)
    // clear UIF
    REG(TIM3_Base_Addr + 0x10U) &= ~(1U);
 
-   // toggling GPIO
-   gpio_debug_toggle_pin();
+   gpio_debug_matrix_toggle();
 }

@@ -20,8 +20,8 @@ int main()
     
     gpio_debug_matrix_init();
 
-    gpio_debug_matrix_toggle(0,0);
-    //timer_debug_init();
+    //gpio_debug_matrix_toggle();
+    timer_debug_init();
     for(;;);
 }
 

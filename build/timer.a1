@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="14677706246887293829">
+<analyzerinfo hash="8661422975363903864">
   <FileInfo check="CheckUnusedFunctions">
     <functiondecl functionName="timer_debug_init" lineNumber="5"/>
     <functiondecl functionName="TIM3_Handler" lineNumber="38"/>
-    <functioncall functionName="gpio_debug_toggle_pin"/>
+    <functioncall functionName="gpio_debug_matrix_toggle"/>
   </FileInfo>
 </analyzerinfo>

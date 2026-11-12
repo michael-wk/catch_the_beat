@@ -1,3 +1,11 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="5965460239868084794">
+<analyzerinfo hash="3743112783569313006">
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous0::current_row&apos; is never used." verbose="struct member &apos;Anonymous0::current_row&apos; is never used." cwe="563" file0="/home/michaelwk/Projects/ctb/src/lib/board.h">
+            <location file="/home/michaelwk/Projects/ctb/src/lib/board.h" line="18" column="13"/>
+            <symbol>Anonymous0::current_row</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous0::matrix&apos; is never used." verbose="struct member &apos;Anonymous0::matrix&apos; is never used." cwe="563" file0="/home/michaelwk/Projects/ctb/src/lib/board.h">
+            <location file="/home/michaelwk/Projects/ctb/src/lib/board.h" line="19" column="13"/>
+            <symbol>Anonymous0::matrix</symbol>
+        </error>
 </analyzerinfo>

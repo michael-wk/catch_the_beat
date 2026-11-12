@@ -1,1 +1,1 @@
-main call:[clock_init,clock_peripherals_enable,gpio_debug_matrix_init,gpio_debug_matrix_toggle,interrupt_peripherals_enable]
+main call:[clock_init,clock_peripherals_enable,gpio_debug_matrix_init,interrupt_peripherals_enable,timer_debug_init]

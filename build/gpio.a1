@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<analyzerinfo hash="1157564267523243742">
-        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous0::a&apos; is never used." verbose="struct member &apos;Anonymous0::a&apos; is never used." cwe="563" file0="/home/michaelwk/Projects/ctb/src/drivers/gpio.h">
-            <location file="/home/michaelwk/Projects/ctb/src/drivers/gpio.h" line="10" column="22"/>
-            <symbol>Anonymous0::a</symbol>
+<analyzerinfo hash="14127130259416021955">
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous0::s&apos; is never used." verbose="struct member &apos;Anonymous0::s&apos; is never used." cwe="563" file0="/home/michaelwk/Projects/ctb/src/drivers/gpio.h">
+            <location file="/home/michaelwk/Projects/ctb/src/drivers/gpio.h" line="28" column="9"/>
+            <symbol>Anonymous0::s</symbol>
         </error>
         <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous1::set&apos; is never used." verbose="struct member &apos;Anonymous1::set&apos; is never used." cwe="563" file0="/home/michaelwk/Projects/ctb/src/drivers/gpio.h">
-            <location file="/home/michaelwk/Projects/ctb/src/drivers/gpio.h" line="29" column="22"/>
+            <location file="/home/michaelwk/Projects/ctb/src/drivers/gpio.h" line="44" column="22"/>
             <symbol>Anonymous1::set</symbol>
         </error>
 </analyzerinfo>

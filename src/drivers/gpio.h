@@ -3,13 +3,30 @@
 
 #include <stdint.h>
 
-// LED matrix GPIO debug (2x1 matrix)
-//==========================================================
-static struct
-{
-    volatile uint8_t a;
-} matrix_debug;
 
+/* GPIO Driver
+ * 
+ * 
+*/
+
+#define GPIO_Base 0x48000000U
+
+/* Toggles passed rows on passed column of the matrix
+ * - bits 0:3 - row data
+ * - bits 4:7 - column data
+*/ 
+void led_toggle_column(uint8_t position);
+
+
+void led_clear_column(uint8_t column);
+
+
+// LED matrix GPIO DEBUG AND EXPERIMENT: (2x1 matrix)
+//==========================================================
+
+static struct {
+    int s;
+} m_info;
 /* Initializes GPIO pins for 2x1 matrix debug:
  * PA0  - a (column 0) GPIO out
  * PA1  - b (column 1) GPIO out
@@ -18,9 +35,7 @@ static struct
 */ 
 void gpio_debug_matrix_init();
 
-void gpio_debug_matrix_toggle(uint8_t row, uint8_t column);
-
-
+void gpio_debug_matrix_toggle();
 
 // Basic GPIO Debug (LED blink:)
 //==========================================================

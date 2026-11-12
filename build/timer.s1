@@ -1,2 +1,2 @@
 timer_debug_init
-TIM3_Handler call:[gpio_debug_toggle_pin] noreturn:[gpio_debug_toggle_pin]
+TIM3_Handler call:[gpio_debug_matrix_toggle] noreturn:[gpio_debug_matrix_toggle]
