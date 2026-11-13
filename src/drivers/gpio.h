@@ -9,7 +9,39 @@
  * 
 */
 
+//===========================================================================
+// GPIO Pin info (HAL)
 #define GPIO_Base 0x48000000U
+#define GPIO_Bank_Size 0x400U
+
+// gpio register map
+typedef struct 
+{
+    volatile uint32_t MODER;
+    volatile uint32_t OTYPER;
+    volatile uint32_t OSPEEDR;
+    volatile uint32_t PUPDR;
+    volatile uint32_t IDR;
+    volatile uint32_t ODR;
+    volatile uint32_t BSRR;
+    volatile uint32_t LCKR;
+    volatile uint32_t AFLR;
+    volatile uint32_t AFHR;
+    volatile uint32_t BRR;
+} GPIO_Type;
+
+typedef enum
+{
+    INPUT,
+    OUTPUT,
+    ALT_FUNC,
+    ANALOG
+} GPIO_Mode;
+
+// defining gpio 
+#define GPIO(bank)              ((GPIO_Type*) ((GPIO_Base_Addr) + ((GPIO_Bank_Size) * (bank))))
+#define GPIO_BANK(pin_info)     ((uint8_t)((pin_info) >> 4U))
+#define GPIO_PIN(pin_info)      ((uint8_t)((pin_info) & 0xFU))
 
 // the pin info contains data of GPIO port & pin number
 // bits 7:4 - gpio port     | A = 0, F = 6
@@ -27,27 +59,14 @@
 #define MATRIX_RE (uint8_t)((2U << 4U) & (1U))
 #define MATRIX_RF (uint8_t)((2U << 4U))
 
-// Matrix Row & Position getter macros.
+void gpio_init(uint8_t pin_info, GPIO_Mode mode);
+
+//===========================================================================
+// LED matrix
 
 // Matrix Row & Position getter macros.
-#define MATRIX_RC
-
-// Matrix Row & Position getter macros.
-#define MATRIX_RC
-
-// Matrix Row & Position getter macros.
-
-// Matrix Row & Position getter macros.
-#define MATRIX_RC
-
-// Matrix Row & Position getter macros.
-#define MATRIX_RC
-
-// Matrix Row & Position getter macros.
-
-// Matrix Row & Position getter macros.
-#define MATRIX_ROW(p) ((uint8_t)(p >> 4))
-#define MATRIX_COLUMN(p) ((uint8_t)(p & 0xFU))
+//#define MATRIX_ROW(p) ((uint8_t)(p >> 4))
+//#define MATRIX_COLUMN(p) ((uint8_t)(p & 0xFU))
 
 // initializes the GPIOs of LED matrix
 void led_init(void);

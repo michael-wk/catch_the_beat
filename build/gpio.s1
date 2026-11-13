@@ -1,0 +1,6 @@
+gpio_init
+led_init call:[gpio_init] noreturn:[gpio_init]
+gpio_debug_matrix_init global:[m_info]
+gpio_debug_matrix_toggle global:[m_info]
+gpio_debug_init global:[gpio_debug]
+gpio_debug_toggle_pin global:[gpio_debug]

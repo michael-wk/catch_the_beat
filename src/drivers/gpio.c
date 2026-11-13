@@ -3,7 +3,26 @@
 #include "mem.h"
 
 
-// GPIO
+// GPIO HAL:
+void gpio_init(uint8_t pin_info, GPIO_Mode mode)
+{
+    uint8_t pin_num = GPIO_PIN(pin_info);
+    GPIO_Type* gpio = GPIO(GPIO_BANK(pin_info));
+    gpio->MODER &= (3U << (pin_num * 2));
+    gpio->MODER |= (mode << (pin_num * 2));
+}
+
+// LED driver:
+void led_init(void)
+{
+    gpio_init(MATRIX_C0, OUTPUT);
+    gpio_init(MATRIX_C1, OUTPUT);
+    gpio_init(MATRIX_C2, OUTPUT);
+    gpio_init(MATRIX_C3, OUTPUT);
+}
+
+
+
 
 
 
